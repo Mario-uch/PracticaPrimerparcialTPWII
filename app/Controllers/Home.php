@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\mUsuarios;
+
 class Home extends BaseController
 {
     public function index()
@@ -26,6 +27,7 @@ class Home extends BaseController
         $mUsuarios->insert($usuarioNuevo);
         $datoId['idRegistrado'] = $mUsuarios->
             db->insertID();
-        return view("vSuccess",$datoId);
+        return view("vSucess",$datoId);
     }
 }
+?>
